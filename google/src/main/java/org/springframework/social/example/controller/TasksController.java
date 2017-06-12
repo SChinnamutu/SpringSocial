@@ -37,6 +37,7 @@ public class TasksController {
 	@ResponseBody
 	@RequestMapping(value="/{taskListId}/view", method=GET)
 	public TaskList getTaskList(@PathVariable String taskListId) {
+		System.out.println("Task");
 		return google.taskOperations().getTaskList(taskListId);
 	}
 	
